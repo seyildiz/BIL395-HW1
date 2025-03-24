@@ -1,4 +1,4 @@
-# BIL395-HW1
+# BIL395-HW1 Su Eda YILDIZ
 
 This github repository includes 2024-2025 Spring BIL395-Programming Language course's first homework. In this homework, I implemented simple calculator that includes variables, assigments, simple arithmetics and simple error handling with lex and yacc. In repository, you can find calculator.l, calculator.y and test_cases.txt that I use for checking my calculator's accuracy.
 
