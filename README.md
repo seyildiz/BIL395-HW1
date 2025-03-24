@@ -20,7 +20,7 @@ Lastly, after added FLOAT, all results will be outputted as float so, for printi
 
 I am using Windows thus, I compiled my files via wsl terminal. Open wsl terminal, cd to directory that calculator files in. Then command these lines:
 
-flex calculator.l
+flex calculator.l \n
 bison -d calculator.y
 gcc calculator.tab.c lex.yy.c -o calculator -lm # (I used math.h for pow function, -lm flag is needed to include math.)
 
