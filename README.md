@@ -1,11 +1,20 @@
 # BIL395-HW1
 
-This github repository includes 
+This github repository includes 2024-2025 Spring BIL395-Programming Language course's first homework. In this homework, I implemented simple calculator that includes variables, assigments, simple arithmetics and simple error handling with lex and yacc. In repository, you can find calculator.l, calculator.y and test_cases.txt that I use for checking my calculator's accuracy.
 
 # Implementing Lex File
 
+Lex files implemented with given. I use regular expression to describe NUMBER and IDENTIFIER. IDENTIFIER and ASSIGN was not specified but the problem part in homework had variables and assignments so I added. Also for bonus I added EXPONENT. I ignored whitespaces and tabs.
 
 # Implementing Yacc File
+
+Yacc file implemented with given rules. I added associativity and precedence rules for tokens. 
+
+For variables I described a struct that has name and value. Then I wrote 2 fuctions that sets and gets the variables. `get_variable_val` returns the value of inputted variable if variable is found in variables array else return the Undefined Variable error. `set_variable_val` looks variables array for given name if found in array it sets the value for found index else creates a new variable and adds it to variables array.
+
+Also for error handling I wrote yyerror function. This function takes a string(char pointer) and prints the given error string. However, I do not want to end my program as long as the user presses Ctrl+D(alternatively Ctrl+C). Thus, the program continues after error occures. Mentioned errors includes Divison By Zero, Invalid Expression, Variable Limit Exceeded and Undefined Variable.
+
+Lastly, after added FLOAT, all results will be outputted as float so, for printing the result I wrote `print_result` function. It checks the result and int casted result is equal and prints accordingly. 
 
 # Compiling and Running
 
